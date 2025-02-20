@@ -1,4 +1,4 @@
-# genssc-wesite
+# Gens Sport Clube - website
 
 ## Project setup
 ```
