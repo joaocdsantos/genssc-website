@@ -5,20 +5,17 @@
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Start dev server, aliases: `vite dev`, `vite serve`
 ```
-npm run serve
+npm run dev
 ```
 
-### Compiles and minifies for production
+### Build for production
 ```
 npm run build
 ```
 
-### Lints and fixes files
+### Locally preview production build
 ```
-npm run lint
+npm run preview
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
