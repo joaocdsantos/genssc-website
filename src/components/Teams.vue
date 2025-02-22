@@ -11,7 +11,5 @@ export default {
 </script>
 
 <style scoped>
-.teams {
-  margin-bottom: 20px;
-}
+
 </style>

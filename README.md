@@ -19,3 +19,11 @@ npm run build
 ```
 npm run preview
 ```
+
+## Colors
+
+|**Color**|**HEX Code**|
+|--|--|
+|Green| #54983d|
+|Red| #c43a22|
+|White| #fefefe| 

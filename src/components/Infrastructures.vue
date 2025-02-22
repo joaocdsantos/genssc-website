@@ -13,7 +13,5 @@ export default {
 </script>
 
 <style scoped>
-.infrastructures {
-  margin-bottom: 20px;
-}
+
 </style>

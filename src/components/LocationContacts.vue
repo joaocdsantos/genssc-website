@@ -12,7 +12,5 @@ export default {
 </script>
 
 <style scoped>
-.localizacao-contatos {
-  margin-bottom: 20px;
-}
+
 </style>

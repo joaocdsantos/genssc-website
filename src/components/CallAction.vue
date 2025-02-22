@@ -22,14 +22,5 @@ export default {
 </script>
 
 <style scoped>
-.call-action {
-  margin-bottom: 20px;
-}
 
-.social-links {
-  margin-top: 10px;
-}
-.social-links a {
-  margin-right: 10px;
-}
 </style>

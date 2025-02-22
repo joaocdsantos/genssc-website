@@ -65,8 +65,5 @@ export default {
 </script>
 
 <style scoped>
-/* Estilos opcionais para o carrossel */
-.carousel {
-  width: 100%;
-}
+
 </style>

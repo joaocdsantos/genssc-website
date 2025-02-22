@@ -1,7 +1,7 @@
 <template>
-  <footer id="footer">
+  <div class="footer-container">
     <p>©2024 Gens Sport Clube. Todos os direitos reservados. | By João Santos</p>
-  </footer>
+  </div>
 </template>
 
 <script>
@@ -11,14 +11,7 @@ export default {
 </script>
 
 <style scoped>
-#footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
+.footer-container{
+color: #fefefe;
 }
-
 </style>
