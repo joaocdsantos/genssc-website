@@ -6,10 +6,10 @@
 
         <div class="social-buttons">
           <a :href="facebookLink" target="_blank">
-            <Facebook :size="48" />
+             <img :src="FACEBOOK_LOGO"></img>
           </a>
           <a :href="instagramLink" target="_blank">
-            <Instagram :size="48" />
+                <img :src="INSTAGRAM_LOGO"></img>
           </a>
         </div>
       </div>
@@ -19,6 +19,10 @@
 
 <script setup>
 import { Facebook, Instagram } from 'lucide-vue-next';
+
+
+import FACEBOOK_LOGO from "../assets/logos/facebook.svg";
+import INSTAGRAM_LOGO from "../assets/logos/instagram.svg";
 
 //Pros
 defineProps(['facebookLink', 'instagramLink']);
@@ -36,14 +40,13 @@ defineProps(['facebookLink', 'instagramLink']);
   width: 90%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
-  color: #f9f9f9;
+  color: #fefefe;
   background-color: #54983d;
 }
 
-.social-buttons a {
-  margin: 10px;
-  align-items: center;
-  color: #f9f9f9;
-  text-decoration: none;
+img {
+  margin: 50px 30px;
+  width: 48px;
+  height: 48px;
 }
 </style>
