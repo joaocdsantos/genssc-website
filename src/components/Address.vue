@@ -44,7 +44,7 @@ import AddressCard from './mini/AddressCard.vue';
   width: 90%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
-  color: #f9f9f9;
+  color: #fefefe;
   background-color: #54983d;
 }
 

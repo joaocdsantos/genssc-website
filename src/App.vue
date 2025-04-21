@@ -30,26 +30,18 @@ body {
   overscroll-behavior-y: none;
 }
 
-#app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100dvh;
-  width: 100%;
-}
-
 header {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
   z-index: 1000;
 }
 
 main {
   flex: 1;
   width: 100%;
-  background-color: #f9f9f9;
+  background-color: #fefefe;
   color: #fefefe;
+  padding-top: 90px;
 }
 
 footer {
