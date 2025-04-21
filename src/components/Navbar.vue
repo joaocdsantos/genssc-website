@@ -1,20 +1,23 @@
 <template>
   <div class="navbar-main-container">
+    
+    <div class="menu" @click="toggleMenu">
+      <Menu v-if="!menuOpen" class="menu-icon"/>
+      <X v-else class="menu-icon" />
+    </div>
+
+
     <div class="logos">
-    <img :src="gensLogo"></img>
-    <img :src="centenaryLogo"></img>
-  </div>
-  <div class="menu" @click="toggleMenu">
-    <Menu v-if="!menuOpen" class="menu-icon"/>
-    <X v-else class="menu-icon" />
-  </div>
- <div v-if="menuOpen" class="menu-dropdown">
+      <img :src="gensLogo"></img>
+      <img :src="centenaryLogo"></img>
+    </div>
+    <div v-if="menuOpen" class="menu-dropdown">
       <ul>
         <li v-for="item in menuItems" :key="item.name">
         <a :href="item.link" @click="toggleMenu">{{ item.name }}</a>
         </li>
       </ul>
-    </div>
+     </div>
   </div>
 </template>
 
@@ -46,30 +49,30 @@ const menuItems = ref([
 <style scoped>
 
 .navbar-main-container {
-  background-color: #c43a22;
   position: fixed;
-  top: 0;
   left: 0;
   width: 100%;
   height: 90px;
   z-index: 999;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
+ /* background-color: rgba(84, 152, 61, 0.8); verde */
+  background-color: rgba(196, 58, 34, 0.9);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  border-bottom: 2px solid #f9f9f9; /* 🟢 Borda branca */
+  border-bottom: 1px solid #54983d; /* 🟢 Borda branca */
+  backdrop-filter: blur(8px);                /* efeito vidro */
+  -webkit-backdrop-filter: blur(8px);
 }
 
-
 .logos {
+  margin-top: 5%;
+  margin-right: 5%;
   display: flex;
   align-items: center;
-  gap: 15px;
 }
 
 .logos img {
-  width: 70px;
+  width: 100px;
   height: auto;
 }
 
@@ -78,13 +81,12 @@ const menuItems = ref([
   cursor: pointer;
   display: flex;
   align-items: center;
-  margin-right: 50px;
-
+  padding-left: 30px;
 }
 
 .menu-icon {
-  width: 40px;
-  height: 40px;
+  width: 24px;
+  height: 24px;
   color: white;
   transition: transform 0.2s ease-in-out;
 }
@@ -96,9 +98,9 @@ const menuItems = ref([
 .menu-dropdown {
   position: absolute;
   top: 70px; /* abaixo da navbar */
-  right: 20px;
+  left: 20px;
   background-color: white;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 15px 25px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   z-index: 200;
