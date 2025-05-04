@@ -1,0 +1,58 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FONTE BASE E CORES GLOBAIS */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    /* background-color: #ffffff;
+    color: #003300; */
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+/* BOTÕES GLOBAIS (opcional) */
+button {
+    cursor: pointer;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--red-gsc);
+    color: var(--white);
+}
+
+/* CORES BASE (útil para utilitários) */
+:root {
+    --green-gsc:#54983d;
+    --red-gsc: #c43a22;
+
+    /* Background --green */
+    --green1: #003300;
+    --green: #073b22;
+    --green2: #0d2e1a;
+    
+    /* Background card --green */
+    --white-gsc: #fefefe;
+
+
+
+    --red: #d62828;
+    --white: #ffffff;
+    --beige: #f5f5f5;
+
+
+   
+}
