@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="logo">
-      <img src="../assets/logos/genssc_logo.png" aria-label="Abrir menu" />
+      <img src="../assets/logos/genssc_logo.png" aria-label="Logotipo Gens Sport Clube" />
     </div>
     <button class="menu-button" @click="toggleMenu" aria-label="Abrir menu">☰</button>
   </header>

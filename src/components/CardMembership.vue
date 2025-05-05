@@ -1,9 +1,15 @@
 <template>
   <section class="card">
     <h1>Novos Sócios</h1>
-    <img src="../assets/gallery/membership-card.svg" alt="mapa" />
-    <p>Vem fazer parte da nossa Família.</p>
-    <button class="btn">Faz-te Sócio</button>
+    <a
+      href="https://docs.google.com/forms/d/e/1FAIpQLSeoVgk-QcUSXEopzezLnNHDZ0PqujrQcXld3gIdDmHNFflm6A/viewform"
+      target="_blank"
+      aria-label="Formulário de adesão de sócio"
+    >
+      <img src="../assets/gallery/membership-card.svg" alt="mapa" />
+      <p>Vem fazer parte da nossa Família.</p>
+      <button class="btn">Faz-te Sócio</button>
+    </a>
   </section>
 </template>
 
