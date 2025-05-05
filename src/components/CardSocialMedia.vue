@@ -1,7 +1,7 @@
 <template>
   <section class="card">
     <h1>Segue-nos nas Redes Sociais</h1>
-    <p>Fica a par dos jogos, eventos e novidades do nosso clube!</p>
+    <p>Fica a par de todos os jogos, eventos e novidades do nosso clube!</p>
     <div class="icons">
       <a href="https://facebook.com/genssc/#" target="_blank" aria-label="Facebook">
         <img src="../assets/logos/facebook.svg" alt="Facebook" />
@@ -15,7 +15,7 @@
 
 <style scoped>
 .card {
-  min-height: 50vh;
+  min-height: 30vh;
   width: 100%;
   background-color: #073b22; /* verde escuro refinado */
   color: #fefefe;
@@ -31,7 +31,7 @@
 }
 .card p {
   font-size: 1.1rem;
-  max-width: 480px;
+  max-width: 300px;
   margin: 0 auto;
 }
 .icons {

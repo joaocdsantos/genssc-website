@@ -17,7 +17,9 @@ a {
     text-decoration: none;
     color: inherit;
 }
-
+p {
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
 img {
     max-width: 100%;
     display: block;
@@ -32,27 +34,22 @@ button {
     border-radius: 5px;
     background-color: var(--red-gsc);
     color: var(--white);
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
 /* CORES BASE (útil para utilitários) */
 :root {
     --green-gsc:#54983d;
     --red-gsc: #c43a22;
+    /* Background card --green */
+    --white-gsc: #fefefe;
 
     /* Background --green */
     --green1: #003300;
     --green: #073b22;
     --green2: #0d2e1a;
     
-    /* Background card --green */
-    --white-gsc: #fefefe;
-
-
-
     --red: #d62828;
     --white: #ffffff;
     --beige: #f5f5f5;
-
-
-   
 }

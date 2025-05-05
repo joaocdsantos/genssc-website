@@ -2,8 +2,8 @@
   <section class="card">
     <h1>Galeria</h1>
     <img src="../assets/gallery/gsc_sports_park.jpg" alt="equipa antiga" />
-    <p>Uma breve descrição da história do clube.</p>
-    <button class="btn">Ver Imagens</button>
+    <p>Conhece-nos através de imagens.</p>
+    <button class="btn">Consultar Galeria</button>
   </section>
 </template>
 
@@ -18,6 +18,9 @@
 .card h1 {
   font-size: 1.7rem;
   margin-bottom: 0.5rem;
+}
+.card p {
+  margin-top: 0.5rem;
 }
 .btn {
   margin-top: 1rem;
