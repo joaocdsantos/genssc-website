@@ -10,9 +10,9 @@
     <CardSocialMedia />
     <!-- <Image /> -->
   </main>
-  <!-- <footer>
+  <footer>
     <FooterInfo />
-  </footer> -->
+  </footer>
 </template>
 
 <script setup>
@@ -27,5 +27,5 @@ import CardSocialMedia from './components/CardSocialMedia.vue';
 
 // import Navbar from './components/Navbar.vue';
 // import Image from './components/Image.vue';
-// import FooterInfo from './components/Footer.vue';
+import FooterInfo from './components/Footer.vue';
 </script>
