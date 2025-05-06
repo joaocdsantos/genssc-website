@@ -6,7 +6,8 @@
     <CardMembership />
     <CardLocation />
     <CardContact />
-    <CardGallery />
+    <!-- <CardGallery /> -->
+    <CardSponsors />
     <CardSocialMedia />
     <!-- <Image /> -->
   </main>
@@ -22,7 +23,8 @@ import CardMembership from './components/CardMembership.vue';
 import CardHistory from './components/CardHistory.vue';
 import CardLocation from './components/CardLocation.vue';
 import CardContact from './components/CardContact.vue';
-import CardGallery from './components/CardGallery.vue';
+// import CardGallery from './components/CardGallery.vue';
+import CardSponsors from './components/CardSponsors.vue';
 import CardSocialMedia from './components/CardSocialMedia.vue';
 
 // import Navbar from './components/Navbar.vue';
