@@ -14,10 +14,17 @@
   background: var(--beije);
   text-align: center;
   padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .card h1 {
   font-size: 1.7rem;
   margin-bottom: 0.5rem;
+}
+.card img {
+  max-width: 250px;
+  opacity: 0.8;
 }
 .card p {
   margin-top: 0.5rem;

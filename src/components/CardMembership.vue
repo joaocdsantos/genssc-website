@@ -7,8 +7,9 @@
       aria-label="Formulário de adesão de sócio"
     >
       <img src="../assets/gallery/membership-card.svg" alt="mapa" />
-      <p>Vem fazer parte da nossa Família.</p>
-      <button class="btn">Faz-te Sócio</button>
+      <p>Cada sócio é uma parte essencial da nossa história e do nosso futuro.</p>
+      <p class="slogan">Apoia o Gens Sport Clube!</p>
+      <button class="btn">Faz-te já Sócio</button>
     </a>
   </section>
 </template>
@@ -21,12 +22,18 @@
   background: var(--green);
   text-align: center;
   padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .card h1 {
   font-size: 1.7rem;
   margin-bottom: 2rem;
 }
-
+.card p {
+  max-width: 320px;
+  text-align: justify;
+}
 .card img {
   display: block;
   margin: 0 auto;
@@ -39,5 +46,13 @@
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 10px;
+}
+
+p.slogan {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: var(--white);
+  font-weight: bold;
 }
 </style>

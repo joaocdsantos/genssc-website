@@ -11,8 +11,8 @@ const currentYear = new Date().getFullYear();
 
 <style scoped>
 .footer-container {
-  background-color: #fefefe;
-  color: #073b22;
+  background-color: var(--red);
+  color: var(--white);
   display: flex;
   flex-direction: column;
   padding: 20px;

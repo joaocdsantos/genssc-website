@@ -9,7 +9,7 @@
 
 <style scoped>
 .card {
-  min-height: 50vh;
+  min-height: 30vh;
   width: 100%;
   background: var(--beije);
   text-align: center;

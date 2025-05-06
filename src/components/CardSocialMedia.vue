@@ -24,14 +24,17 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 .card h1 {
+  padding: 5px;
+  max-width: 250px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 1.7rem;
   margin-bottom: 0.5rem;
 }
 .card p {
-  font-size: 1.1rem;
-  max-width: 300px;
+  max-width: 320px;
   margin: 0 auto;
 }
 .icons {

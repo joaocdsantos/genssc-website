@@ -4,7 +4,7 @@
     <img src="../assets/gallery/history.png" alt="equipa antiga" />
     <p>
       O Gens Sport Clube, fundado a 1 de Janeiro de 1925, é uma instituição desportiva com uma rica história e um papel
-      significativo na comunidade de Gens, no concelho de Gondomar. Ao longo dos anos ...
+      significativo ...
     </p>
     <button class="btn">Saber mais</button>
   </section>
@@ -30,6 +30,8 @@
   opacity: 0.8;
 }
 .card p {
+  max-width: 320px;
+  text-align: justify;
   margin-top: 0.5rem;
 }
 .btn {
