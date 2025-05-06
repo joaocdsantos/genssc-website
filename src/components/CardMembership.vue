@@ -25,6 +25,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 50px;
 }
 .card h1 {
   font-size: 1.7rem;

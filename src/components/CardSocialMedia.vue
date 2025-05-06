@@ -1,5 +1,5 @@
 <template>
-  <section class="card">
+  <section class="card" id="social-media">
     <h1>Segue-nos nas Redes Sociais</h1>
     <p>Fica a par de todos os jogos, eventos e novidades do nosso clube!</p>
     <div class="icons">

@@ -9,7 +9,7 @@
 
 <style scoped>
 .hero {
-  height: 80vh;
+  height: 75vh;
   margin-top: 60px;
   display: flex;
   align-items: center;

@@ -1,5 +1,5 @@
 <template>
-  <section class="card">
+  <section class="card" id="history">
     <h1>A nossa história</h1>
     <img src="../assets/gallery/history.png" alt="equipa antiga" />
     <p>
@@ -11,6 +11,9 @@
 </template>
 
 <style scoped>
+section {
+  scroll-margin-top: 80px;
+}
 .card {
   min-height: 50vh;
   width: 100%;
@@ -20,6 +23,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 50px;
 }
 .card h1 {
   font-size: 1.7rem;
