@@ -17,7 +17,7 @@
 .card {
   min-height: 30vh;
   width: 100%;
-  background-color: #073b22; /* verde escuro refinado */
+  background-color: #073b22;
   color: #fefefe;
   text-align: center;
   padding: 3rem 1rem;

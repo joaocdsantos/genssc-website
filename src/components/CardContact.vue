@@ -1,23 +1,21 @@
 <template>
   <section class="card" id="contacts">
     <h1>Contacta-nos</h1>
-    <a href="mailto:geral@genssc.pt" class="contact-item">
+    <a href="mailto:geral@genssc.pt" class="contact-item" aria-label="contacto eletrónico">
       <MailPlus />
       <span> geral@genssc.pt</span>
     </a>
-    <a href="tel:+351224541250" class="contact-item">
+    <a href="tel:+351224541250" class="contact-item" aria-label="contacto telefónico">
       <PhoneForwarded />
       <span> 224 541 250</span>
     </a>
-
-    <!-- <a href="mailto:geral@genssc.pt"><p>geral@genssc.pt</p></a>
-    <a href="tel:+351224541250"><p>224 541 250</p></a>
-    <button class="btn">Envia mensagem</button> -->
   </section>
 </template>
+
 <script setup>
 import { PhoneForwarded, MailPlus } from 'lucide-vue-next';
 </script>
+
 <style scoped>
 section {
   scroll-margin-top: 80px;

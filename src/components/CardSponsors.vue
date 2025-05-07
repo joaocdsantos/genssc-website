@@ -16,16 +16,13 @@ const loadSponsors = async () => {
     // Obtém todas as imagens na pasta sponsors
     const imagesContext = import.meta.glob('../assets/sponsors/*.{png,jpg,jpeg,svg}');
 
-    // Precisamos carregar os arquivos chamando as funções de importação
     const paths = await Promise.all(
       Object.keys(imagesContext).map(async path => {
-        const module = await imagesContext[path](); // Carrega a imagem
-        return module.default; // Pega a URL da imagem
+        const module = await imagesContext[path]();
+        return module.default;
       })
     );
-
     sponsors.value = paths;
-    console.log('Imagens carregadas:', sponsors.value);
   } catch (error) {
     console.error('Erro ao carregar Patrocinadores', error);
   }
