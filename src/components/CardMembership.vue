@@ -6,7 +6,7 @@
       target="_blank"
       aria-label="Formulário de adesão de sócio"
     >
-      <img src="../assets/gallery/membership-card.svg" alt="mapa" />
+      <img src="../assets/cards/membership-card.svg" alt="mapa" />
       <p>Cada sócio é uma parte essencial da nossa história e do nosso futuro.</p>
       <p class="slogan">Apoia o Gens Sport Clube!</p>
       <button class="btn">Faz-te já Sócio</button>

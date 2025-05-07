@@ -1,7 +1,7 @@
 <template>
   <section class="card" id="history">
     <h1>A nossa história</h1>
-    <img src="../assets/gallery/history.png" alt="equipa antiga" />
+    <img src="../assets/cards/history-card.png" alt="equipa antiga" />
     <p>
       O Gens Sport Clube, fundado a 1 de Janeiro de 1925, é uma instituição desportiva com uma rica história e um papel
       significativo ...

@@ -1,9 +1,9 @@
 <template>
   <section class="card" id="location">
     <h1>Localização</h1>
-    <img src="../assets/gallery/location.png" alt="mapa cartoon" />
-    <p>Verifica aqui como chegar às nossas instalações.</p>
-    <button class="btn">Como chegar</button>
+    <img src="../assets/cards/location-card.png" alt="mapa cartoon" />
+    <p>Consulta aqui como podes chegar às nossas instalações.</p>
+    <button class="btn">Obter direções</button>
   </section>
 </template>
 
@@ -33,6 +33,7 @@ section {
 .card p {
   margin-top: 0.5rem;
   max-width: 250px;
+  text-align: justify;
 }
 .btn {
   margin-top: 1rem;
