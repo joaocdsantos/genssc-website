@@ -38,10 +38,4 @@ section {
   text-align: justify;
   margin-top: 0.5rem;
 }
-.btn {
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 10px;
-}
 </style>

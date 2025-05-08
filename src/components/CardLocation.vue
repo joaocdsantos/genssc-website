@@ -3,7 +3,9 @@
     <h1>Localização</h1>
     <img src="../assets/cards/location-card.png" alt="mapa cartoon" />
     <p>Consulta aqui como podes chegar às nossas instalações.</p>
-    <RouterLink to="/location"><button class="btn">Obter direções</button></RouterLink>
+    <RouterLink to="/location"
+      ><button class="btn"><spap>Obter direções</spap></button></RouterLink
+    >
   </section>
 </template>
 
@@ -34,11 +36,5 @@ section {
   margin-top: 0.5rem;
   max-width: 250px;
   text-align: justify;
-}
-.btn {
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 10px;
 }
 </style>

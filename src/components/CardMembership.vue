@@ -42,12 +42,6 @@
   transform: rotate(-15deg);
   margin-bottom: 2rem;
 }
-.btn {
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 10px;
-}
 
 p.slogan {
   text-align: center;
