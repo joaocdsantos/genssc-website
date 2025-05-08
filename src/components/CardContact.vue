@@ -11,7 +11,7 @@
         <MailPlus />
         <span> formacao@genssc.pt</span>
       </a>
-      <a href="mailto:geral@genssc.pt" class="contact-item" aria-label="contacto eletrónico">
+      <a href="mailto:direcao@genssc.pt" class="contact-item" aria-label="contacto eletrónico">
         <MailPlus />
         <span> direcao@genssc.pt</span>
       </a>
