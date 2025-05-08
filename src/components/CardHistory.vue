@@ -6,7 +6,7 @@
       O Gens Sport Clube, fundado a 1 de Janeiro de 1925, é uma instituição desportiva com uma rica história e um papel
       significativo ...
     </p>
-    <button class="btn">Saber mais</button>
+    <RouterLink to="/history"> <button class="btn">Saber mais</button> </RouterLink>
   </section>
 </template>
 

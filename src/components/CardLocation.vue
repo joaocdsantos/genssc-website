@@ -3,7 +3,7 @@
     <h1>Localização</h1>
     <img src="../assets/cards/location-card.png" alt="mapa cartoon" />
     <p>Consulta aqui como podes chegar às nossas instalações.</p>
-    <button class="btn">Obter direções</button>
+    <RouterLink to="/location"><button class="btn">Obter direções</button></RouterLink>
   </section>
 </template>
 

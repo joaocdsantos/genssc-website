@@ -21,7 +21,21 @@
       <X class="menu-close-icon" @click="toggleMenu" />
       <ul>
         <li v-for="item in menuItems" :key="item.name">
+          <!-- Router links -->
+          <RouterLink v-if="item.link.startsWith('/')" :to="item.link" @click.native="toggleMenu">
+            <component :is="item.icon" class="menu-item-icon" />
+            <span>{{ item.name }}</span>
+          </RouterLink>
+
+          <!-- Âncoras (scroll suave programático) -->
+          <a v-else-if="item.anchor" href="javascript:void(0)" @click="navigateToAnchor(item.link)">
+            <component :is="item.icon" class="menu-item-icon" />
+            <span>{{ item.name }}</span>
+          </a>
+
+          <!-- Links externos -->
           <a
+            v-else
             :href="item.link"
             @click="toggleMenu"
             :target="item.link.startsWith('http') ? '_blank' : null"
@@ -38,24 +52,41 @@
 
 <script setup>
 import { ref } from 'vue';
-import { Menu, X, BookOpen, Users, MapPin, Phone, Share2 } from 'lucide-vue-next';
+import { useRouter } from 'vue-router';
+import { Menu, X, BookOpen, Users, MapPin, Phone, Share2, HomeIcon } from 'lucide-vue-next';
 
 const menuOpen = ref(false);
+const router = useRouter();
 
 const toggleMenu = () => {
   menuOpen.value = !menuOpen.value;
 };
 
+const navigateToAnchor = async hash => {
+  if (router.currentRoute.value.path !== '/') {
+    await router.push('/');
+    setTimeout(() => {
+      const el = document.querySelector(hash);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }, 300);
+  } else {
+    const el = document.querySelector(hash);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }
+  toggleMenu();
+};
+
 const menuItems = ref([
-  { name: 'A nossa História', link: '#history', icon: BookOpen },
+  { name: 'Início', link: '#hero', icon: HomeIcon, anchor: true },
+  { name: 'O Gens SC', link: '/history', icon: BookOpen },
   {
     name: 'Novos Sócios',
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSeoVgk-QcUSXEopzezLnNHDZ0PqujrQcXld3gIdDmHNFflm6A/viewform',
     icon: Users,
   },
-  { name: 'Localização', link: '#location', icon: MapPin },
-  { name: 'Contacto', link: '#contacts', icon: Phone },
-  { name: 'Redes Sociais', link: '#social-media', icon: Share2 },
+  { name: 'Localização', link: '/location', icon: MapPin },
+  { name: 'Contacto', link: '#contacts', icon: Phone, anchor: true },
+  { name: 'Redes Sociais', link: '#social-media', icon: Share2, anchor: true },
 ]);
 </script>
 
