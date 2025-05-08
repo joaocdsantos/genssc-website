@@ -1,9 +1,9 @@
 <template>
-  <section class="hero">
+  <section class="card" id="hero">
     <div
       v-for="(img, i) in imagesToShow"
       :key="i"
-      class="hero-bg"
+      class="card-bg"
       :style="{ backgroundImage: `url(${img})`, opacity: i === currentIndex ? 1 : 0 }"
     ></div>
     <div class="overlay">
@@ -90,14 +90,17 @@ const backgroundStyle = computed(() => {
 </script>
 
 <style scoped>
-.hero {
+section {
+  scroll-margin-top: 80px;
+}
+.card {
   position: relative;
-  height: 75vh;
-  margin-top: 60px;
+  height: 80vh;
   overflow: hidden;
 }
 
-.hero-bg {
+.card-bg {
+  margin-top: 60px;
   position: absolute;
   top: 0;
   left: 0;
