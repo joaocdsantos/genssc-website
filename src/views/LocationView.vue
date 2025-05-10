@@ -1,11 +1,19 @@
 <template>
   <section class="location-section">
     <h1>Localização</h1>
-    <RouterLink to="/" class="back-link">Voltar à Página Inicial</RouterLink>
+
+    <!-- INSERIR AS LOCALIZAÇõES-->
     <div class="slogan">
       <span>Gens Sport Clube</span>
       <span>O Gens que nos une.</span>
     </div>
+
+    <div class="triple-separator">
+      <div class="line green"></div>
+      <div class="line white"></div>
+      <div class="line red"></div>
+    </div>
+
     <RouterLink to="/" class="back-link">Voltar à Página Inicial</RouterLink>
   </section>
 </template>
@@ -32,7 +40,29 @@ h1 {
   font-weight: 500;
   text-decoration: none;
 }
+.triple-separator {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 2rem 0;
+}
 
+.line {
+  height: 3px;
+  width: 100%;
+}
+
+.green {
+  background-color: green;
+}
+
+.white {
+  background-color: white;
+}
+
+.red {
+  background-color: red;
+}
 .slogan {
   display: flex;
   flex-direction: column;
