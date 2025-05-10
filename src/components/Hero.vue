@@ -1,5 +1,5 @@
 <template>
-  <section class="card" id="hero">
+  <section class="card" id="inicio">
     <div
       v-for="(img, i) in imagesToShow"
       :key="i"
@@ -11,7 +11,7 @@
       <h4>DESDE 1925</h4>
       <button @click="toggleHino" class="hino-button">
         <component :is="isPlaying ? VolumeX : Volume2" class="icon" />
-        {{ isPlaying ? 'Parar' : 'Ouvir' }}
+        {{ isPlaying ? 'Parar Hino' : 'Ouvir Hino' }}
       </button>
       <audio ref="hinoAudio" src="/media/anthem.mp3" @ended="isPlaying = false"></audio>
     </div>
@@ -76,17 +76,6 @@ onBeforeUnmount(() => {
 
 // imagens com fallback incluído
 const imagesToShow = computed(() => (images.value.length ? images.value : [estadioImage]));
-
-const backgroundStyle = computed(() => {
-  const imageUrl = imagesToShow.value[currentIndex.value];
-  return {
-    backgroundImage: `url(${imageUrl})`,
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    transition: 'background-image 1s ease-in-out',
-  };
-});
 </script>
 
 <style scoped>
@@ -135,18 +124,20 @@ section {
   color: var(--white);
   padding: 0.5rem 1.2rem;
   border-radius: 20px;
+  border: none;
   cursor: pointer;
   font-weight: bold;
   font-size: 1rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: transform 0.3s ease;
   opacity: 0.5;
 }
 
 .hino-button:hover {
   background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.2);
 }
 
 .icon {

@@ -9,14 +9,13 @@
       <img src="../assets/cards/membership-card.svg" alt="cartão de sócio" />
       <p>Cada sócio é uma parte essencial da nossa história e do nosso futuro.</p>
       <p class="slogan">Apoia o Gens Sport Clube!</p>
-      <button class="btn">Faz-te já Sócio</button>
+      <button class="btn-link">Faz-te já Sócio</button>
     </a>
   </section>
 </template>
 
 <style scoped>
 .card {
-  min-height: 50vh;
   width: 100%;
   color: var(--white);
   background: var(--green);
@@ -25,20 +24,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
 }
 .card h1 {
-  font-size: 1.7rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 .card p {
-  max-width: 320px;
+  margin-top: 1rem;
+  max-width: 850px;
   text-align: justify;
 }
 .card img {
   display: block;
   margin: 0 auto;
-  max-width: 200px;
+  max-width: 210px;
   transform: rotate(-15deg);
   margin-bottom: 2rem;
 }

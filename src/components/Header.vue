@@ -53,7 +53,7 @@
 <script setup>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-import { Menu, X, BookOpen, Users, MapPin, Phone, Share2, HomeIcon } from 'lucide-vue-next';
+import { Menu, X, BookOpen, Users, MapPin, Phone, Share2, HomeIcon, FileText } from 'lucide-vue-next';
 
 const menuOpen = ref(false);
 const router = useRouter();
@@ -77,16 +77,17 @@ const navigateToAnchor = async hash => {
 };
 
 const menuItems = ref([
-  { name: 'Início', link: '#hero', icon: HomeIcon, anchor: true },
-  { name: 'O Gens SC', link: '/history', icon: BookOpen },
+  { name: 'Início', link: '#inicio', icon: HomeIcon, anchor: true },
+  { name: 'O Gens SC', link: '/clube', icon: BookOpen },
   {
     name: 'Novos Sócios',
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSeoVgk-QcUSXEopzezLnNHDZ0PqujrQcXld3gIdDmHNFflm6A/viewform',
     icon: Users,
   },
-  { name: 'Localização', link: '/location', icon: MapPin },
-  { name: 'Contacto', link: '#contacts', icon: Phone, anchor: true },
-  { name: 'Redes Sociais', link: '#social-media', icon: Share2, anchor: true },
+  { name: 'Localização', link: '/localizacao', icon: MapPin },
+  { name: 'Contacto', link: '#contactos', icon: Phone, anchor: true },
+  { name: 'Redes Sociais', link: '#redes-sociais', icon: Share2, anchor: true },
+  { name: 'Outras Informações', link: '/institucional', icon: FileText },
 ]);
 </script>
 
@@ -128,11 +129,11 @@ const menuItems = ref([
   font-size: 2rem;
   color: #ffffff;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease;
 }
 
 .menu-icon:hover {
-  transform: scale(1.2);
+  transform: scale(1.3);
 }
 
 /* OVERLAY ESCURECIDO */

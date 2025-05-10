@@ -1,5 +1,5 @@
 <template>
-  <section class="card" id="social-media">
+  <section class="card" id="redes-sociais">
     <h1>Segue-nos nas Redes Sociais</h1>
     <p>Fica a par de todos os jogos, eventos e novidades do nosso clube!</p>
     <div class="icons">
@@ -15,30 +15,27 @@
 
 <style scoped>
 .card {
-  min-height: 30vh;
   width: 100%;
-  background-color: #073b22;
-  color: #fefefe;
+  background-color: var(--green);
+  color: var(--white);
   text-align: center;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  padding-bottom: 40px;
 }
 .card h1 {
-  padding: 5px;
-  max-width: 250px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 1.7rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 .card p {
-  max-width: 320px;
-  margin: 0 auto;
+  margin-top: 1rem;
+  max-width: 850px;
+  text-align: justify;
 }
 .icons {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   display: flex;
   justify-content: center;
   gap: 2.5rem;
@@ -46,11 +43,9 @@
 .icons img {
   width: 56px;
   height: 56px;
-  transition: transform 0.3s ease, filter 0.3s ease;
-  filter: brightness(1);
+  transition: transform 0.3s ease;
 }
 .icons a:hover img {
-  transform: scale(1.1);
-  filter: brightness(1.3);
+  transform: scale(1.2);
 }
 </style>

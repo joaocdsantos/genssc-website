@@ -1,5 +1,5 @@
 <template>
-  <section class="card" id="contacts">
+  <section class="card" id="contactos">
     <h1>Contacta-nos</h1>
 
     <div class="contact-info">
@@ -33,8 +33,6 @@ section {
   scroll-margin-top: 80px;
 }
 .card {
-  min-height: 30vh;
-  width: 100%;
   color: var(--white);
   background: var(--green);
   text-align: center;
@@ -42,44 +40,36 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
 }
 .card h1 {
-  font-size: 1.7rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 .contact-info {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 .contact-item {
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
   width: 100%;
-  max-width: 320px;
+  max-width: 260px;
   font-weight: 600;
   color: var(--green);
+  background: var(--white);
   text-decoration: none;
-  background-color: var(--white);
-  padding: 0.6rem 1.2rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 12px;
-  margin-top: 0.8rem;
-  transition: background 0.2s ease;
-  gap: 0.7rem;
+  margin-top: 1rem;
+  gap: 0.5rem;
+  transition: transform 0.3s ease;
 }
 
-.contact-item svg {
-  width: 24px;
-  height: 24px;
-  justify-self: start;
-}
-
-.contact-item span {
-  justify-self: center;
-  text-align: center;
-  width: 100%;
+.contact-item:hover {
+  transform: scale(1.1);
 }
 </style>
