@@ -13,7 +13,6 @@
 
 <style scoped>
 .card {
-  min-height: 20vh;
   width: 100%;
   color: var(--green);
   background: var(--white);
@@ -25,7 +24,6 @@
 }
 .card h2 {
   font-size: 1.3rem;
-
   text-align: center;
   margin-bottom: 2rem;
 }
