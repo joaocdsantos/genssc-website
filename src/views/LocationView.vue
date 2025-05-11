@@ -21,7 +21,7 @@
     />
 
     <div class="slogan">
-      <span>Gens Sport Clube.</span>
+      <span>Gens Sport Clube</span>
       <span>O Gens que nos une.</span>
     </div>
 
@@ -38,8 +38,8 @@
 <script setup>
 import CardAddress from '../components/CardAddress.vue';
 
-import estadioImg from '../assets/gallery/estadio.jpg';
-import sedeImg from '../assets/gallery/gsc_test2.jpg';
+import estadioImg from '../assets/cards/address-card-parque-desportivo.png';
+import sedeImg from '../assets/cards/address-card-sede-social.jpg';
 </script>
 
 <style scoped>
