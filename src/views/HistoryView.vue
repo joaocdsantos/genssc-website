@@ -30,7 +30,7 @@
         inclusão. O envolvimento comunitário é um pilar do clube.
       </p>
       <p>
-        Iniciativas do grupo “Amigas do Gens”, criado em 2015 por mulheres da freguesia, ajudam a angariar fundos para
+        Iniciativas do grupo “Amigas do Gens”, criado em 2015 por mulheres do Lugar, ajudam a angariar fundos para
         melhorias no clube, reforçando o espírito associativo que sempre nos guiou.
       </p>
       <p>

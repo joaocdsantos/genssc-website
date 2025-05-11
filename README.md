@@ -32,24 +32,7 @@ npm run preview
 | Red       | #c43a22      |
 | White     | #fefefe      |
 
-## ICONS
+## Frameworks
 
+- Vue Router
 - Lucile Vue Next
-
-## A implementar
-
-- Faz-te sócio
-  - link externo
-  - nova aba
-- O Gens Sport Clube
-  - texto de descrição
-- Galeria
-  - fotos
-- Mapa
-  - ver dimensões
-- Localização
-  - adiconar click para ir
-- Contacto
-  - implementar
-- Redes Sociais
-  - alterar simbolos e espaçamentos
