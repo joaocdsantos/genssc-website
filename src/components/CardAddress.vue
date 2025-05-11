@@ -55,7 +55,6 @@ const cardStyle = computed(() => ({
 .card-image {
   width: 300px;
   height: auto;
-  object-fit: cover;
   border-radius: 12px;
   margin-bottom: 1.2rem;
 }

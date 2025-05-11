@@ -7,8 +7,10 @@
       :style="{ backgroundImage: `url(${img})`, opacity: i === currentIndex ? 1 : 0 }"
     ></div>
     <div class="overlay">
-      <h1>O GENS QUE NOS UNE</h1>
-      <h4>DESDE 1925</h4>
+      <div class="text">
+        <h1>O GENS QUE NOS UNE</h1>
+        <h4>DESDE 1925</h4>
+      </div>
       <button @click="toggleHino" class="hino-button">
         <component :is="isPlaying ? VolumeX : Volume2" class="icon" />
         {{ isPlaying ? 'Parar Hino' : 'Ouvir Hino' }}
@@ -21,7 +23,7 @@
 <script setup>
 import { VolumeX, Volume2 } from 'lucide-vue-next';
 import { ref, onMounted, onBeforeUnmount, computed } from 'vue';
-import estadioImage from '../assets/gallery/gsc_test2.jpg';
+import defaultHeroImage from '../assets/IMG_1.png';
 
 const hinoAudio = ref(null);
 const isPlaying = ref(false);
@@ -50,7 +52,7 @@ const currentIndex = ref(0);
 let intervalId = null;
 
 const loadImages = async () => {
-  const imageModules = import.meta.glob('../assets/gallery/*.{png,jpg,jpeg}');
+  const imageModules = import.meta.glob('../assets/hero/*.{png,jpg,jpeg}');
   const loadedImages = [];
 
   for (const path in imageModules) {
@@ -58,7 +60,7 @@ const loadImages = async () => {
     loadedImages.push(mod.default);
   }
 
-  images.value = [estadioImage, ...loadedImages];
+  images.value = [defaultHeroImage, ...loadedImages];
 };
 
 onMounted(async () => {
@@ -75,7 +77,7 @@ onBeforeUnmount(() => {
 });
 
 // imagens com fallback incluído
-const imagesToShow = computed(() => (images.value.length ? images.value : [estadioImage]));
+const imagesToShow = computed(() => (images.value.length ? images.value : [defaultHeroImage]));
 </script>
 
 <style scoped>
@@ -115,6 +117,10 @@ section {
   justify-content: center;
   color: white;
   text-align: center;
+}
+
+.text {
+  margin-bottom: 150px;
 }
 
 .hino-button {
