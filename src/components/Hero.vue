@@ -1,11 +1,13 @@
 <template>
   <section class="card" id="inicio">
     <div
-      v-for="(img, i) in imagesToShow"
-      :key="i"
-      class="card-bg"
-      :style="{ backgroundImage: `url(${img})`, opacity: i === currentIndex ? 1 : 0 }"
+        v-for="(img, i) in imagesToShow"
+        :key="i"
+        class="card-bg"
+        :class="{ active: i === currentIndex, previous: i === previousIndex }"
+        :style="{ backgroundImage: `url(${img})` }"
     ></div>
+
     <div class="overlay">
       <div class="text">
         <h1>O GENS QUE NOS UNE</h1>
@@ -31,16 +33,8 @@ const isPlaying = ref(false);
 const toggleHino = () => {
   const audio = hinoAudio.value;
   if (!audio) return;
-
   if (audio.paused) {
-    audio
-      .play()
-      .then(() => {
-        isPlaying.value = true;
-      })
-      .catch(() => {
-        isPlaying.value = false;
-      });
+    audio.play().then(() => isPlaying.value = true).catch(() => isPlaying.value = false);
   } else {
     audio.pause();
     isPlaying.value = false;
@@ -49,25 +43,31 @@ const toggleHino = () => {
 
 const images = ref([]);
 const currentIndex = ref(0);
+const previousIndex = ref(null);
 let intervalId = null;
 
 const loadImages = async () => {
   const imageModules = import.meta.glob('../assets/hero/*.{png,jpg,jpeg}');
   const loadedImages = [];
-
   for (const path in imageModules) {
     const mod = await imageModules[path]();
     loadedImages.push(mod.default);
   }
-
   images.value = [defaultHeroImage, ...loadedImages];
 };
+
+const imagesToShow = computed(() => (images.value.length ? images.value : [defaultHeroImage]));
 
 onMounted(async () => {
   await loadImages();
   if (images.value.length > 1) {
     intervalId = setInterval(() => {
+      previousIndex.value = currentIndex.value;
       currentIndex.value = (currentIndex.value + 1) % images.value.length;
+      // limpa a referência anterior após o fade (para não deixar camadas visíveis acumuladas)
+      setTimeout(() => {
+        previousIndex.value = null;
+      }, 1000); // precisa ser igual ao tempo do transition no CSS
     }, 5000);
   }
 });
@@ -75,9 +75,6 @@ onMounted(async () => {
 onBeforeUnmount(() => {
   clearInterval(intervalId);
 });
-
-// imagens com fallback incluído
-const imagesToShow = computed(() => (images.value.length ? images.value : [defaultHeroImage]));
 </script>
 
 <style scoped>
@@ -100,8 +97,19 @@ section {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  transition: opacity 3s ease-out;
+  opacity: 0;
   z-index: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.card-bg.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.card-bg.previous {
+  opacity: 0;
+  z-index: 1;
 }
 
 .overlay {
