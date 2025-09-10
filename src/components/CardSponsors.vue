@@ -1,51 +1,53 @@
 <template>
-  <section class="card">
-    <div class="sponsor-logos" v-for="sponsor in sponsors" :key="sponsor">
-      <img :src="sponsor" />
-    </div>
-  </section>
+	<section class="card">
+		<div class="sponsor-logos" v-for="sponsor in sponsors" :key="sponsor">
+			<img :src="sponsor" loading="lazy" />
+		</div>
+	</section>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+	import { ref, onMounted } from "vue";
 
-const sponsors = ref([]);
+	const sponsors = ref([]);
 
-const loadSponsors = async () => {
-  try {
-    // Obtém todas as imagens na pasta sponsors
-    const imagesContext = import.meta.glob('../assets/sponsors/*.{png,jpg,jpeg,svg}');
+	const loadSponsors = async () => {
+		try {
+			// Obtém todas as imagens na pasta sponsors
+			const imagesContext = import.meta.glob(
+				"../assets/sponsors/*.{png,jpg,jpeg,svg}"
+			);
 
-    const paths = await Promise.all(
-      Object.keys(imagesContext).map(async path => {
-        const module = await imagesContext[path]();
-        return module.default;
-      })
-    );
-    sponsors.value = paths;
-  } catch (error) {
-    console.error('Erro ao carregar Patrocinadores', error);
-  }
-};
+			const paths = await Promise.all(
+				Object.keys(imagesContext).map(async (path) => {
+					const module = await imagesContext[path]();
+					return module.default;
+				})
+			);
+			sponsors.value = paths;
+		} catch (error) {
+			console.error("Erro ao carregar Patrocinadores", error);
+		}
+	};
 
-onMounted(loadSponsors);
+	onMounted(loadSponsors);
 </script>
 
 <style scoped>
-.card {
-  min-height: 10vh;
-  width: 100%;
-  background: var(--white);
-  text-align: center;
-  padding: 2rem 1rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.sponsor-logos img {
-  border-radius: 0;
-  width: auto;
-  height: 60px;
-  margin: 5px;
-}
+	.card {
+		min-height: 10vh;
+		width: 100%;
+		background: var(--white);
+		text-align: center;
+		padding: 2rem 1rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+	.sponsor-logos img {
+		border-radius: 0;
+		width: auto;
+		height: 60px;
+		margin: 5px;
+	}
 </style>
