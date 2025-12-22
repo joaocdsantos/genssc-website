@@ -1,30 +1,21 @@
 <template>
 	<Hero />
-	<div class="red-bar"></div>
+	<DividerBar />
 	<div class="home-cards-row">
 		<CardHistory />
 		<CardMembership />
 		<CardLocation />
 	</div>
-	<div class="red-bar"></div>
-
+	<DividerBar />
 	<CardContact />
-	<div class="red-bar"></div>
-
+	<DividerBar />
 	<CardSponsors />
-	<div class="red-bar"></div>
+	<DividerBar />
 
 	<CardSocialMedia />
 </template>
 
 <style scoped>
-	.red-bar {
-		width: 100%;
-		height: 20px;
-		background: var(--red);
-		margin: 0;
-		border-radius: 4px;
-	}
 	.home-cards-row {
 		display: flex;
 		flex-direction: column;
@@ -53,6 +44,7 @@
 </style>
 
 <script setup>
+	import DividerBar from "../components/DividerBar.vue";
 	import Hero from "../components/Hero.vue";
 	import CardHistory from "../components/CardHistory.vue";
 	import CardMembership from "../components/CardMembership.vue";
