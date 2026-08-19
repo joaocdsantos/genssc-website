@@ -1,5 +1,5 @@
 <template>
-  <section class="card" id="localizacao">
+  <section class="card home-card" id="localizacao">
     <h2>Localização</h2>
 
     <picture>
@@ -11,7 +11,9 @@
       <source srcset="../assets/cards/location/location-card.webp" type="image/webp" media="(min-width: 601px)" />
       <img src="../assets/cards/location/location-card.jpg" alt="mapa cartoon" loading="lazy" />
     </picture>
-    <p>Consulta aqui como podes chegar às nossas instalações.</p>
+    <div class="card-content">
+      <p>Consulta aqui como podes chegar às nossas instalações.</p>
+    </div>
     <RouterLink to="/localizacao" class="btn-link">Obter direções</RouterLink>
   </section>
 </template>
@@ -55,7 +57,7 @@ picture {
 }
 @media (min-width: 900px) {
   .btn-link {
-    margin-top: auto;
+    margin-top: 1rem;
   }
 }
 </style>

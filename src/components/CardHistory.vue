@@ -1,15 +1,17 @@
 <template>
-  <section class="card" id="clube">
+  <section class="card home-card" id="clube">
     <h2>A nossa história</h2>
     <picture>
       <source srcset="../assets/cards/history/history-card-mobile.webp" type="image/webp" media="(max-width: 600px)" />
       <source srcset="../assets/cards/history/history-card.webp" type="image/webp" media="(min-width: 601px)" />
       <img src="../assets/cards/history/history-card.jpg" alt="equipa antiga do Gens SC" loading="lazy" />
     </picture>
-    <p>
-      O Gens Sport Clube é uma instituição de utilidade pública com uma rica história e um papel significativo na
-      comunidade de Gens, sendo uma referência desportiva no concelho de Gondomar.
-    </p>
+    <div class="card-content">
+      <p>
+        O Gens Sport Clube é uma instituição de utilidade pública com um papel significativo na comunidade, sendo uma
+        referência desportiva no concelho de Gondomar.
+      </p>
+    </div>
     <RouterLink to="/clube" class="btn-link">Saber mais</RouterLink>
   </section>
 </template>
@@ -56,7 +58,7 @@ picture {
 }
 @media (min-width: 900px) {
   .btn-link {
-    margin-top: auto;
+    margin-top: 1rem;
   }
 }
 </style>

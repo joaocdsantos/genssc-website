@@ -1,5 +1,5 @@
 <template>
-  <section class="card">
+  <section class="card home-card">
     <h2>Área de Sócios</h2>
     <a
       href="https://docs.google.com/forms/d/e/1FAIpQLSeoVgk-QcUSXEopzezLnNHDZ0PqujrQcXld3gIdDmHNFflm6A/viewform"
@@ -16,8 +16,10 @@
 
         <img src="../assets/cards/membership/membership-card.jpg" alt="cartão de sócio" loading="lazy" />
       </picture>
-      <p>Cada sócio é uma parte essencial da nossa história e do nosso futuro.</p>
-      <p class="slogan">Apoia o Gens Sport Clube!</p>
+      <div class="card-content">
+        <p>Cada sócio é uma parte essencial da nossa história e do nosso futuro.</p>
+        <p class="slogan">Apoia o Gens Sport Clube!</p>
+      </div>
       <span class="btn-link">Faz-te já Sócio</span>
     </a>
   </section>
@@ -66,7 +68,7 @@ picture {
 
 p.slogan {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-top: 1rem;
   color: var(--white);
   font-weight: bold;
@@ -80,7 +82,7 @@ p.slogan {
 
 @media (min-width: 900px) {
   .btn-link {
-    margin-top: auto;
+    margin-top: 1rem;
   }
 }
 </style>

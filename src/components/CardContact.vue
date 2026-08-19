@@ -3,71 +3,71 @@
     <h2>Contacta-nos</h2>
 
     <div class="contact-info">
-      <div class="contact-group">
-        <span class="contact-label">Geral</span>
-        <a
-          href="mailto:geral@genssc.pt"
-          class="contact-item"
-          aria-label="Email geral: geral@genssc.pt"
-          title="geral@genssc.pt"
-        >
-          <MailPlus aria-hidden="true" />
-        </a>
-      </div>
+      <div class="contact-primary">
+        <div class="contact-group">
+          <span class="contact-label">Geral</span>
+          <a
+            href="mailto:geral@genssc.pt"
+            class="contact-item"
+            aria-label="Email geral: geral@genssc.pt"
+            title="geral@genssc.pt"
+          >
+            <MailPlus aria-hidden="true" />
+          </a>
+        </div>
 
-      <div class="contact-group">
-        <span class="contact-label">Formação</span>
-        <a
-          href="mailto:formacao@genssc.pt"
-          class="contact-item"
-          aria-label="Email da formação: formacao@genssc.pt"
-          title="formacao@genssc.pt"
-        >
-          <MailPlus aria-hidden="true" />
-        </a>
-      </div>
+        <div class="contact-group">
+          <span class="contact-label">Formação</span>
+          <a
+            href="mailto:formacao@genssc.pt"
+            class="contact-item"
+            aria-label="Email da formação: formacao@genssc.pt"
+            title="formacao@genssc.pt"
+          >
+            <MailPlus aria-hidden="true" />
+          </a>
+        </div>
 
-      <div class="contact-group">
-        <span class="contact-label">Direção</span>
-        <a
-          href="mailto:direcao@genssc.pt"
-          class="contact-item"
-          aria-label="Email da direção: direcao@genssc.pt"
-          title="direcao@genssc.pt"
-        >
-          <MailPlus aria-hidden="true" />
-        </a>
+        <div class="contact-group">
+          <span class="contact-label">Direção</span>
+          <a
+            href="mailto:direcao@genssc.pt"
+            class="contact-item"
+            aria-label="Email da direção: direcao@genssc.pt"
+            title="direcao@genssc.pt"
+          >
+            <MailPlus aria-hidden="true" />
+          </a>
+        </div>
       </div>
-      <!--
-      <div class="contact-group">
-        <span class="contact-label">Telefone</span>
-        <a
-          href="tel:+351224541250"
-          class="contact-item"
-          aria-label="Telefone: 224 541 250"
-          title="224 541 250"
-        >
-          <PhoneForwarded aria-hidden="true" />
-        </a>
-      </div>
-    -->
-      <div class="contact-group">
-        <span class="contact-label">Facebook</span>
-        <a href="https://www.facebook.com/genssc" class="contact-item" aria-label="Facebook: genssc" title="genssc">
-          <img src="../assets/logos/facebook.svg" alt="" loading="lazy" />
-        </a>
-      </div>
+      <div class="contact-social">
+        <div class="contact-group">
+          <span class="contact-label">Facebook</span>
+          <a
+            href="https://www.facebook.com/genssc"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-item"
+            aria-label="Facebook: genssc"
+            title="genssc"
+          >
+            <img src="../assets/logos/facebook.svg" alt="" loading="lazy" />
+          </a>
+        </div>
 
-      <div class="contact-group">
-        <span class="contact-label">Instagram</span>
-        <a
-          href="https://instagram.com/gens_sport_clube"
-          class="contact-item"
-          aria-label="Instagram: genssc"
-          title="genssc"
-        >
-          <img src="../assets/logos/instagram.svg" alt="" loading="lazy" />
-        </a>
+        <div class="contact-group">
+          <span class="contact-label">Instagram</span>
+          <a
+            href="https://instagram.com/gens_sport_clube"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-item"
+            aria-label="Instagram: genssc"
+            title="genssc"
+          >
+            <img src="../assets/logos/instagram.svg" alt="" loading="lazy" />
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -104,6 +104,14 @@ section {
   gap: 1.5rem;
   margin-top: 1rem;
 }
+.contact-primary,
+.contact-social {
+  display: flex;
+  gap: 1.5rem;
+}
+.contact-social {
+  justify-content: center;
+}
 .contact-group {
   display: flex;
   flex-direction: column;
@@ -137,5 +145,19 @@ section {
 
 .contact-item:hover {
   transform: scale(1.1);
+}
+
+@media (max-width: 899px) {
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .contact-primary,
+  .contact-social {
+    justify-content: center;
+    width: 100%;
+  }
 }
 </style>
