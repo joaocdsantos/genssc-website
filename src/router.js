@@ -1,21 +1,19 @@
 import { createWebHistory, createRouter } from 'vue-router'
 
-import HomeView from './views/HomeView.vue'
-import HistoryView from './views/HistoryView.vue';
-import LocationView from './views/LocationView.vue';
-import InstitutionalView from './views/InstitutionalView.vue';
-
 const routes = [
-    { path: '/', component: HomeView },
-    { path: '/clube', component: HistoryView },
-    { path: '/localizacao', component: LocationView },
-    { path: '/institucional', component: InstitutionalView }
+    { path: '/', component: () => import('./views/HomeView.vue') },
+    { path: '/clube', component: () => import('./views/HistoryView.vue') },
+    { path: '/localizacao', component: () => import('./views/LocationView.vue') }
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes,
   scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) return savedPosition;
+    if (to.hash) {
+      return { el: to.hash, behavior: 'smooth' };
+    }
     return { top: 0 };
   }
 });

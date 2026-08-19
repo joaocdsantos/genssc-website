@@ -1,4 +1,12 @@
-# Gens Sport Clube - website
+# Website Gens Sport Clube
+
+Institutional website for the amateur football club **Gens SC**, built with Vue.js, to showcase the club, its contacts, social media and facilities locations.
+
+## Functionalities
+
+- Homepage with club identity
+- Club history, membership and location information
+- Links to official social media
 
 ## Project setup
 
@@ -28,11 +36,12 @@ npm run preview
 
 | **Color** | **HEX Code** |
 | --------- | ------------ |
-| Green     | #54983d      |
-| Red       | #c43a22      |
-| White     | #fefefe      |
+| Green     | #073b22      |
+| Red       | #d62828      |
+| White     | #ffffff      |
 
 ## Frameworks
 
 - Vue Router
-- Lucile Vue Next
+- lucide-vue-next
+- MapLibre GL JS

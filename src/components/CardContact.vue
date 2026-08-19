@@ -1,25 +1,55 @@
 <template>
   <section class="card" id="contactos">
-    <h1>Contacta-nos</h1>
+    <h2>Contacta-nos</h2>
 
     <div class="contact-info">
-      <a href="mailto:geral@genssc.pt" class="contact-item" aria-label="contacto eletrónico">
-        <MailPlus />
-        <span> geral@genssc.pt</span>
-      </a>
-      <a href="mailto:formacao@genssc.pt" class="contact-item" aria-label="contacto eletrónico">
-        <MailPlus />
-        <span> formacao@genssc.pt</span>
-      </a>
-      <a href="mailto:direcao@genssc.pt" class="contact-item" aria-label="contacto eletrónico">
-        <MailPlus />
-        <span> direcao@genssc.pt</span>
-      </a>
+      <div class="contact-group">
+        <span class="contact-label">Geral</span>
+        <a
+          href="mailto:geral@genssc.pt"
+          class="contact-item"
+          aria-label="Email geral: geral@genssc.pt"
+          title="geral@genssc.pt"
+        >
+          <MailPlus aria-hidden="true" />
+        </a>
+      </div>
 
-      <a href="tel:+351224541250" class="contact-item" aria-label="contacto telefónico">
-        <PhoneForwarded />
-        <span> 224 541 250 </span>
-      </a>
+      <div class="contact-group">
+        <span class="contact-label">Formação</span>
+        <a
+          href="mailto:formacao@genssc.pt"
+          class="contact-item"
+          aria-label="Email da formação: formacao@genssc.pt"
+          title="formacao@genssc.pt"
+        >
+          <MailPlus aria-hidden="true" />
+        </a>
+      </div>
+
+      <div class="contact-group">
+        <span class="contact-label">Direção</span>
+        <a
+          href="mailto:direcao@genssc.pt"
+          class="contact-item"
+          aria-label="Email da direção: direcao@genssc.pt"
+          title="direcao@genssc.pt"
+        >
+          <MailPlus aria-hidden="true" />
+        </a>
+      </div>
+
+      <div class="contact-group">
+        <span class="contact-label">Telefone</span>
+        <a
+          href="tel:+351224541250"
+          class="contact-item"
+          aria-label="Telefone: 224 541 250"
+          title="224 541 250"
+        >
+          <PhoneForwarded aria-hidden="true" />
+        </a>
+      </div>
     </div>
   </section>
 </template>
@@ -42,31 +72,48 @@ section {
   align-items: center;
   padding-bottom: 40px;
 }
-.card h1 {
+.card h2 {
   margin-bottom: 1rem;
 }
 .contact-info {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: center;
   width: 100%;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.contact-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+  margin-bottom: 0.4rem;
 }
 .contact-item {
-  display: grid;
-  grid-template-columns: auto 1fr;
+  display: flex;
   align-items: center;
-  width: 100%;
-  max-width: 260px;
-  font-weight: 600;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
   color: var(--green);
   background: var(--white);
   text-decoration: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 12px;
-  margin-top: 1rem;
-  gap: 0.5rem;
+  border-radius: 50%;
   transition: transform 0.3s ease;
+}
+
+.contact-item svg {
+  width: 24px;
+  height: 24px;
 }
 
 .contact-item:hover {

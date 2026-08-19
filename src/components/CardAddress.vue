@@ -1,13 +1,13 @@
 <template>
 	<div class="card" :style="cardStyle">
+		<h2>{{ title }}</h2>
 		<picture>
-			<source :srcset="source" type="image/webp" media="(max-width: 600px)" />
-			<source :srcset="source" type="image/webp" media="(min-width: 601px)" />
-			<img :src="imageSource" alt="Foto" class="card-image" loading="lazy" />
+			<source :srcset="mobileSource" type="image/webp" media="(max-width: 600px)" />
+			<source :srcset="desktopSource" type="image/webp" media="(min-width: 601px)" />
+			<img :src="fallbackImage" :alt="title" class="card-image" loading="lazy" />
 		</picture>
 
 		<div class="card-content">
-			<h2>{{ title }}</h2>
 			<p>{{ address }}</p>
 			<small>{{ zip }}</small>
 
@@ -23,7 +23,7 @@
 </template>
 
 <script setup>
-	import { Pointer, MapPinHouse } from "lucide-vue-next";
+	import { MapPinHouse } from "lucide-vue-next";
 	import { computed } from "vue";
 
 	const props = defineProps({
@@ -33,8 +33,9 @@
 		mapsQuery: String,
 		color: String,
 		backgroundColor: String,
-		imageSource: String,
-		source: String,
+		mobileSource: String,
+		desktopSource: String,
+		fallbackImage: String,
 	});
 
 	const mapLink = computed(
@@ -54,29 +55,42 @@
 		padding: 2rem 1rem;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
 		align-items: center;
 	}
 	.card-content {
 		width: 100%;
+		flex: 1;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		gap: 0.6rem;
 	}
 	.card-image {
-		width: 300px;
-		height: auto;
+		width: 100%;
+		max-width: 300px;
+		aspect-ratio: 4 / 3;
+		object-fit: cover;
 		border-radius: 12px;
 		margin-bottom: 1.2rem;
 	}
 	.card h2 {
 		font-size: 1.3rem;
 		text-align: center;
+		margin-bottom: 1.2rem;
 	}
 
 	.card a {
 		text-decoration: none;
+	}
+
+	.btn-link {
+		margin-top: 1.5rem;
+	}
+
+	@media (min-width: 900px) {
+		.btn-link {
+			margin-top: auto;
+		}
 	}
 
 	.inline-icon {

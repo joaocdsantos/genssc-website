@@ -94,19 +94,19 @@ h1 {
   width: 100%;
 }
 .green {
-  background-color: green;
+  background-color: var(--green);
 }
 .white {
-  background-color: white;
+  background-color: var(--white);
 }
 .red {
-  background-color: red;
+  background-color: var(--red);
 }
 .back-link {
   display: block;
   text-align: center;
   margin-bottom: 2rem;
-  color: #3b82f6;
+  color: var(--link);
   font-weight: 500;
   text-decoration: none;
 }
