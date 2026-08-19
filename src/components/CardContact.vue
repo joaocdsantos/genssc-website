@@ -38,7 +38,7 @@
           <MailPlus aria-hidden="true" />
         </a>
       </div>
-
+      <!--
       <div class="contact-group">
         <span class="contact-label">Telefone</span>
         <a
@@ -48,6 +48,25 @@
           title="224 541 250"
         >
           <PhoneForwarded aria-hidden="true" />
+        </a>
+      </div>
+    -->
+      <div class="contact-group">
+        <span class="contact-label">Facebook</span>
+        <a href="https://www.facebook.com/genssc" class="contact-item" aria-label="Facebook: genssc" title="genssc">
+          <img src="../assets/logos/facebook.svg" alt="" loading="lazy" />
+        </a>
+      </div>
+
+      <div class="contact-group">
+        <span class="contact-label">Instagram</span>
+        <a
+          href="https://instagram.com/gens_sport_clube"
+          class="contact-item"
+          aria-label="Instagram: genssc"
+          title="genssc"
+        >
+          <img src="../assets/logos/instagram.svg" alt="" loading="lazy" />
         </a>
       </div>
     </div>
