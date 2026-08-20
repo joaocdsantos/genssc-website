@@ -84,6 +84,12 @@
     height: 200px;
   }
 }
+
+@media (min-width: 601px) and (max-width: 899px) {
+  :deep(.home-card .card-content p) {
+    text-align: center;
+  }
+}
 </style>
 
 <script setup>
