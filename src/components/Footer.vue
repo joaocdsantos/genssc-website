@@ -7,6 +7,9 @@
       <a href="https://instagram.com/gens_sport_clube" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
         <img src="../assets/logos/instagram.svg" alt="" loading="lazy" />
       </a>
+      <a href="https://www.linkedin.com/company/genssc" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <img src="../assets/logos/linkedIn.svg" alt="" loading="lazy" />
+      </a>
     </div>
 
     <p>Gens Sport Clube © {{ currentYear }}</p>
